@@ -77,8 +77,12 @@ Must have the following installed:
   ```
   And if a route is simply not defined, it should go to a generic "this page cannot be found" page.
 
-### Caching
+### Optimizations:
+  ##### Caching
   Normally I would implement caching using the serializers but that would normally be based on a timestamp and the sql insert commands provided did not allow for timestamps.
+
+  ##### Indexes in DB
+  I would also add indexes to the database depending on the queries I found myself writing. For example, if I found that I was querying the pets by weight or age a lot, I might create indexes for those columns Also, in that case, it would be better if those columns were integers instead of strings, but I left them as strings since that is what the format of the provided data was for this assignment.
 
 ### Testing
   I would also normally include tests using the rspec gem. This would include tests for the routes and the model (if validations were needed etc), and potentially also to make sure that the serialized payload followed the correct json schema. These are the types of tests I've written in the past.
