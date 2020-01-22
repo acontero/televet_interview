@@ -11,9 +11,12 @@ Must have the following installed:
   * `rails db:migrate`
 
   * For local mysql db console:
-  `mysql -u root televet_development`
+  `mysql -u root` (include specific database after root if you like)
 
-  * If televet_development db doesn't exist, create it.
+  * NOTE: If televet_development db doesn't exist, create it. Normally I would create a rake task to do this.
+  `create database televet_development`
+
+  * NOTE: If televet_test db doesn't exist, and you want to run tests, create it. Normally I would create a rake task to do this.
   `create database televet_development`
 
   * Run the SQL script given for the interview assignment, slightly modified, in seeds.rb.
@@ -85,4 +88,4 @@ Must have the following installed:
   I would also add indexes to the database depending on the queries I found myself writing. For example, if I found that I was querying the pets by weight or age a lot, I might create indexes for those columns Also, in that case, it would be better if those columns were integers instead of strings, but I left them as strings since that is what the format of the provided data was for this assignment.
 
 ### Testing
-  I would also normally include tests using the rspec gem. This would include tests for the routes and the model (if validations were needed etc), and potentially also to make sure that the serialized payload followed the correct json schema. These are the types of tests I've written in the past.
+  I included a few basic tests using the rspec gem. I included tests for the routes. I would in the future add tests for the model (if validations were needed etc), and potentially also to make sure that the serialized payload followed the correct json schema. These are the types of tests I've written in the past.
