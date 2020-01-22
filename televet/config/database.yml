@@ -14,9 +14,6 @@ development:
   database: televet_development
   username: root
   host: localhost
-  # host: 127.0.0.1
-  # slave:
-  #   host: 127.0.0.1
 
 #To log into this locally mysql -uroot
 

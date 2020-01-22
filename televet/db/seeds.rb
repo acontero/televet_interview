@@ -1,25 +1,11 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongsgiven_ide the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 #create database televet_development;
 #removed:   given_id SERIAL PRIMARY KEY,
 
-# DROP TABLE IF EXISTS pets;
-# CREATE TABLE pets (
-#   given_id integer NULL,
-#   name varchar(255) default NULL,
-#   weight varchar(100) default NULL,
-#   age varchar(100) default NULL
-# );
-
 # ActiveRecord::Base.connection.exec_query <<-SQL
 # SQL
-
 
 #For this project just run this SQL directly in the MYSQL db:
 # DROP TABLE IF EXISTS pets;
@@ -30,16 +16,8 @@
 #   age varchar(100) default NULL
 # );
 
-# ActiveRecord::Base.connection.exec_query <<-SQL
-# INSERT INTO pets (given_id,name,weight,age) VALUES (1,'Fuzzy','14.2','03.3'),(2,'Pupcake','5.4','05.5'),(3,'Brady','15.0','10.8'),(4,'Eve','17.0','05.2'),(5,'Paul','00.8','01.8'),(6,'Kirsten','08.6','08.2'),(7,'Garrison','09.5','02.2'),(8,'Zoe','06.9','07.1'),(9,'Xander','20.7','13.3'),(10,'Zorita','11.3','01.4');
-# SQL
 
-
-
-
-
-
-
+##############################################################
 #For this project just run this SQL directly in the MYSQL db:
 INSERT INTO pets (given_id,name,weight,age) VALUES (1,'Fuzzy','14.2','03.3'),(2,'Pupcake','5.4','05.5'),(3,'Brady','15.0','10.8'),(4,'Eve','17.0','05.2'),(5,'Paul','00.8','01.8'),(6,'Kirsten','08.6','08.2'),(7,'Garrison','09.5','02.2'),(8,'Zoe','06.9','07.1'),(9,'Xander','20.7','13.3'),(10,'Zorita','11.3','01.4');
 SQL
