@@ -23,6 +23,8 @@ development:
 test:
   <<: *default
   database: televet_test
+  username: root
+  host: localhost
 
 production:
   <<: *default
