@@ -27,6 +27,7 @@ To install the gems: `bundle`
 
 * To startup the server:
   `rails server` from within the televet_interview/televet dir
+  Then you can go to http://localhost:3000 in your browser.
 
 * To enter the rails console:
   `rails console` from within the televet_interview/televet dir
@@ -39,24 +40,22 @@ To install the gems: `bundle`
   http://localhost:3000/pets?page=1
   http://localhost:3000/pets?page=2
 
-  The response for these will look something like this, as specified by the given sample pets.json file:
+  The response for these will look something like this, as specified by the instructions (and not the given sample pets.json file which showed a different format):
   ```
   {
-  	"cols": [
-  		"id",
-  		"name",
-  		"weight",
-  		"age"
-  	],
-  	"data": [
-  		[
-  			1,
-  			"Fuzzy",
-  			"14.2",
-  			"03.4"
-  		],
+    "pets":[
+      {"id":21,"name":"Aladdin","weight":"13.6","age":"02.2"},
+      {"id":22,"name":"Ivor","weight":"15.8","age":"11.0"}
       ...
-    ]
+    ],
+    "meta":{
+      "last_page":false,
+      "num_pages":10,
+      "current_page":3,
+      "page_size":10,
+      "total_count":100
+    }
+  }
   ```
 
   http://localhost:3000/pets/1 (or whatever index you choose, up to 100)
@@ -80,8 +79,5 @@ To install the gems: `bundle`
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Caching
+  Normally I would implement caching using the serializers but that would normally be based on a timestamp and the sql insert commands provided did not allow for timestamps.
